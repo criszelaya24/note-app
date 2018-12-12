@@ -2,13 +2,12 @@
 	var notes = [];
 	function Note(text) {
 		notes.push(text);
+		var create = new Create;
 
 		function getNote() {
-			var numList = 1;
 			document.getElementById("getNote").innerHTML = ""
 			for (var i = 0; i < notes.length; i++) {
-				document.getElementById("getNote").innerHTML += "<li>"+ numList + "- " + notes[i]+"</li>"
-				numList ++;
+				create.newNote(notes[i]);
 			}
 		}
 		return {
