@@ -1,20 +1,3 @@
-function call() {
-	var newText = document.getElementById("text");
-	if (newText.value === '') {
-
-	}else{
-		this.note = new Note(newText.value);
-		this.note.getNote();
-		document.getElementById("text").value = ""
-	}
-}
-
-// function getIndex() {
-// 	// window.location.redirect("myLoginUrl");
-// 	note.getNote();
-// 	showForm();
-// }
-
 window.addEventListener('hashchange', function(event){
 	event.preventDefault()
 	if (window.location.hash === "") {
@@ -35,6 +18,17 @@ window.addEventListener('load', function(event){
 	// }
 });
 
+function call() {
+	var newText = document.getElementById("text");
+	if (newText.value === '') {
+		alert('No valid emty string')
+
+	}else{
+		this.note = new Note(newText.value);
+		this.note.getNote();
+		document.getElementById("text").value = ""
+	}
+}
 
 function hideForm() {
 	document.getElementById("text").style.display = "none";
