@@ -12,8 +12,18 @@
 				create.newNote(notes[i]["id"], notes[i]["text"]);
 			}
 		}
+
+		function showNote(idNote) {
+			var id =  parseInt(idNote, 10); // Convert string to integer
+			for (var i = 0; i < notes.length; i++) {
+				if (id === notes[i]["id"]) {
+					create.noteView(notes[i]["id"], notes[i]["text"]);
+				}
+			}
+		}
 		return {
-			getNote: getNote
+			getNote: getNote,
+			showNote: showNote
 		}
 	}
 	exports.Note = Note;
